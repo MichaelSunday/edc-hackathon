@@ -12,8 +12,10 @@
 <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-resource.js"></script>
 </head>
 <body>
+<section ng-controller="EdcController as events">
 <div class="header">
   <div class="flex-distribute">
     <svg class="search-icon header-fill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 36">
@@ -29,7 +31,7 @@
 </div>
 <div class="main-container">
 
-  <div class="table-section">
+  <div class="table-section" ng-repeat="event in events.all">
     <h1>{{1 + 1}}</h1>
     <a href="#"><div class="cell"> 
 <img class="profile-pic" src="img/dada-life.png"/>
@@ -39,8 +41,10 @@ c0,0.55,0.45,1,1,1c0.55,0,1-0.45,1-1v-1C20,13.79,18.21,12,16,12z"/>
 </svg>
     <h2>59</h2>
     <h1>Ugliest Shuffle</h1>
-    <p>Dada Life &middot; Champagne Shower</p>     
+    <p>{{event.name}} &middot; Champagne Shower</p>     
     </div></a>
+  </div>
+</section>    
     
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
@@ -51,3 +55,8 @@ c0,0.55,0.45,1,1,1c0.55,0,1-0.45,1-1v-1C20,13.79,18.21,12,16,12z"/>
 <script src="js/edcController.js"></script>
 </body>
 </html>
+
+
+
+
+
