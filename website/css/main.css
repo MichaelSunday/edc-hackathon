@@ -22,8 +22,16 @@ hr {
 	margin: 1em 0;
 	padding: 0;
 }
-audio, canvas, iframe, img, svg, video {
+audio, canvas, iframe, img, svg {
 	vertical-align: middle;
+}
+video {
+	vertical-align: middle;
+	width: 100%;
+	/*height: 100%;*/
+	-webkit-transform: scaleY(1.5); 
+  /*-moz-transform: scaleX(2);*/
+  margin-top: 52px;
 }
 fieldset {
 	border: 0;
@@ -106,14 +114,24 @@ a {
 	border-bottom: solid 1px #ccc;	
 }
 
-.cell img.profile-pic {
-	    width: 39px;
+.profile-pic {
+	  width: 39px;
     height: 39px;
     margin-right: 10px;
     float: left;
     border-radius: 50%;
     position: relative;
     top: 6px;
+}
+
+.ava-pic {
+	  width: 39px;
+    height: 39px;
+    margin-right: 10px;
+    float: left;
+    border-radius: 50%;
+    position: relative;
+    /*top: 6px;*/
 }
 svg.contestant-icon{
 	width:10px;
@@ -234,7 +252,18 @@ p, h2, h3 {
 	orphans: 3;
 	widows: 3;
 }
-h2, h3 {
+h2, h3, p {
 	page-break-after: avoid;
 }
+}
+
+.avatar-top {
+	margin-bottom: 10px
+}
+
+.green {
+	color: #29A112;
+	font-size: 10px;
+	margin:0;
+	padding:0;
 }

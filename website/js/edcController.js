@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('Edc', ['ngResource'])
+angular.module('Edc', [])
   .controller('EdcController', EdcController);
 
   EdcController.$inject = ['$http', '$scope'];
